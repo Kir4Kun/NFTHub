@@ -1,0 +1,50 @@
+{
+  "name": "polygon-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run hardhat\" \"npm run deploy &\" \"next dev\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "hardhat": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "serve": "concurrently \"npm run hardhat\" \"npm run deploy &\" \"node server.js\""
+  },
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@fontsource/roboto": "^4.5.3",
+    "@mui/lab": "^5.0.0-alpha.73",
+    "@mui/material": "^5.5.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.5.0",
+    "axios": "^0.26.1",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "4.0.0-alpha.0",
+    "ethers": "^5.6.1",
+    "hardhat": "^2.9.1",
+    "ipfs-http-client": "^56.0.1",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "web3modal": "^1.9.5"
+  },
+  "devDependencies": {
+    "@typechain/ethers-v5": "^9.0.0",
+    "@typechain/hardhat": "^5.0.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "autoprefixer": "^10.4.4",
+    "concurrently": "^7.0.0",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.12",
+    "ts-node": "^10.7.0",
+    "typechain": "^7.0.1",
+    "typescript": "^4.6.2"
+  }
+}
